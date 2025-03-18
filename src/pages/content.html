@@ -1,11 +1,16 @@
-<div show.bind="pageLoading" class="page-loading-overlay vh-100">
+<div
+	class="page-loading-overlay vh-100 position-fixed"
+	style="width: -webkit-fill-available"
+	show.bind="pageLoading"
+>
 	<div
-		class="d-flex flex-column align-items-center justify-content-center h-100"
+		class="d-flex flex-column align-items-center justify-content-center h-100 w-100"
 	>
 		<div
-			class="spinner-border text-primary"
-			style="width: 3rem; height: 3rem"
+			class="spinner-border text-danger"
+			style="width: 7rem; height: 7rem;"
 			role="status"
+
 		>
 			<span class="visually-hidden">Loading...</span>
 		</div>
