@@ -7,6 +7,10 @@
 	}
 }
 
+au-viewport {
+	animation: fadeIn 0.10s ease-in-out forwards;
+}
+
 body {
 	background-color: #f5f5f5;
 	overflow: hidden;
@@ -151,5 +155,9 @@ footer {
 }
 
 .fade-out {
-	animation: fadeOut 0.2s ease-in-out forwards;
+	animation: fadeOut 0.2s forwards;
+}
+
+.page-loading-overlay {
+	background-color: transparent;
 }
