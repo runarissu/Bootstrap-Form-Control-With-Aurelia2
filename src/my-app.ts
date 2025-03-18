@@ -19,16 +19,10 @@ export class MyApp {
 			id: "Select2",
 		},
 		{
-			path: "contact",
-			component: () => import("./pages/contact"),
-			title: "ติดต่อเรา",
-			id: "contact",
-		},
-		{
-			path: "faq",
-			component: () => import("./pages/faq"),
-			title: "คำถามที่พบบ่อย",
-			id: "faq",
+			path: "TextareaGuide",
+			component: () => import("./pages/TextareaGuide"),
+			title: "Textarea",
+			id: "Textarea",
 		},
 	];
 
