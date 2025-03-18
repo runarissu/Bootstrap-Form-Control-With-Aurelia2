@@ -7,10 +7,10 @@ export class MyApp {
 			id: "FormControl",
 		},
 		{
-			path: "about",
-			component: () => import("./pages/about"),
-			title: "เกี่ยวกับเรา",
-			id: "about",
+			path: "CheckRadio",
+			component: () => import("./pages/CheckRadio"),
+			title: "Check & Radio",
+			id: "CheckRadio",
 		},
 		{
 			path: "services",
