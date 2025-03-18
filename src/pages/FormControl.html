@@ -1,0 +1,241 @@
+<div class="container mt-4">
+	<div class="jumbotron">
+		<h1 class="display-4">Form Control</h1>
+		<hr class="my-4" />
+	</div>
+	<div>
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-3">1. ตัวอย่างพื้นฐาน</h4>
+				<div class="mb-2">
+					<label class="form-label"
+						>ชื่อ - นามสกุล (ฟิลด์อยู่คนละบรรทัด)</label
+					>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="ชื่อ - นามสกุล"
+					/>
+				</div>
+				<div class="row g-3 align-items-center">
+					<div class="col-auto">
+						<label class="col-form-label"
+							>ชื่อ - นามสกุล (ฟิลด์อยู่บรรทัดเดียวกัน)</label
+						>
+					</div>
+					<div class="col">
+						<input type="text" class="form-control" />
+					</div>
+				</div>
+
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre class="bg-light p-2 border rounded"><code>&lt;div&gt;
+  &lt;label class="form-label"&gt;ชื่อ - นามสกุล&lt;/label&gt;
+  &lt;input type="text" class="form-control" placeholder="ชื่อ - นามสกุล"&gt;
+&lt;/div&gt;
+
+&lt;div class="row g-3 align-items-center"&gt;
+  &lt;div class="col-auto"&gt;
+    &lt;label class="col-form-label"&gt;ชื่อ - นามสกุล&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    &lt;input type="text" class="form-control" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+			</div>
+		</div>
+
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-3">2. ตัวอย่าง Form Control ต่างๆ</h4>
+
+				<!-- Text input -->
+				<div class="mb-3">
+					<label for="textInput" class="form-label">Text Input</label>
+					<input
+						type="text"
+						class="form-control"
+						id="textInput"
+						placeholder="กรุณากรอกข้อความ"
+					/>
+					<div class="form-text">
+						input type="text" สำหรับข้อความทั่วไป
+					</div>
+				</div>
+
+				<!-- Number input -->
+				<div class="mb-3">
+					<label for="numberInput" class="form-label"
+						>Number Input</label
+					>
+					<input
+						type="number"
+						class="form-control"
+						id="numberInput"
+						min="0"
+						max="100"
+						step="1"
+						value="50"
+					/>
+					<div class="form-text">
+						input type="number" สำหรับตัวเลข มีปุ่มเพิ่ม/ลดค่า
+					</div>
+				</div>
+
+				<!-- Date input -->
+				<div class="mb-3">
+					<label for="dateInput" class="form-label">Date Input</label>
+					<input type="date" class="form-control" id="dateInput" />
+					<div class="form-text">
+						input type="date" สำหรับเลือกวันที่
+					</div>
+				</div>
+
+				<!-- Time input -->
+				<div class="mb-3">
+					<label for="timeInput" class="form-label">Time Input</label>
+					<input type="time" class="form-control" id="timeInput" />
+					<div class="form-text">
+						input type="time" สำหรับเลือกเวลา
+					</div>
+				</div>
+
+				<!-- Tel input -->
+				<div class="mb-3">
+					<label for="telInput" class="form-label"
+						>Telephone Input</label
+					>
+					<input
+						type="tel"
+						class="form-control"
+						id="telInput"
+						placeholder="099-999-9999"
+						pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+					/>
+					<div class="form-text">
+						input type="tel" สำหรับหมายเลขโทรศัพท์ (รูปแบบ:
+						099-999-9999)
+					</div>
+				</div>
+
+				<!-- URL input -->
+				<div class="mb-3">
+					<label for="urlInput" class="form-label">URL Input</label>
+					<input
+						type="url"
+						class="form-control"
+						id="urlInput"
+						placeholder="https://example.com"
+					/>
+					<div class="form-text">
+						input type="url" สำหรับที่อยู่เว็บไซต์
+					</div>
+				</div>
+
+				<!-- Week input -->
+				<div class="mb-3">
+					<label for="weekInput" class="form-label">Week Input</label>
+					<input type="week" class="form-control" id="weekInput" />
+					<div class="form-text">
+						input type="week" สำหรับเลือกสัปดาห์ในปี
+					</div>
+				</div>
+
+				<!-- Month input -->
+				<div class="mb-3">
+					<label for="monthInput" class="form-label"
+						>Month Input</label
+					>
+					<input type="month" class="form-control" id="monthInput" />
+					<div class="form-text">
+						input type="month" สำหรับเลือกเดือนและปี
+					</div>
+				</div>
+
+				<!-- Datetime-local input -->
+				<div class="mb-3">
+					<label for="datetimeInput" class="form-label"
+						>Datetime-local Input</label
+					>
+					<input
+						type="datetime-local"
+						class="form-control"
+						id="datetimeInput"
+					/>
+					<div class="form-text">
+						input type="datetime-local" สำหรับเลือกวันที่และเวลา
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<label for="formFile" class="form-label"
+						>ตัวอย่างช่องอัปโหลดไฟล์พื้นฐาน</label
+					>
+					<input class="form-control" type="file" id="formFile" />
+					<div class="form-text">
+						input type="file" สำหรับอัปโหลดไฟล์
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="formFileMultiple" class="form-label"
+						>ตัวอย่างช่องอัปโหลดหลายไฟล์</label
+					>
+					<input
+						class="form-control"
+						type="file"
+						id="formFileMultiple"
+						multiple
+					/>
+					<div class="form-text">
+						input type="file" multiple สำหรับอัปโหลดหลายไฟล์
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-3">3. การปิดใช้งาน (Disabled)</h4>
+
+				<p>
+					ปิดใช้งาน Form Control ได้โดยเพิ่มแอตทริบิวต์ disabled และ
+					readonly
+				</p>
+
+				<input
+					class="form-control"
+					type="text"
+					value="Input Field with Readonly"
+					disabled
+					readonly
+				/>
+
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre
+					class="bg-light p-2 border rounded"
+				><code>&lt;input class="form-control" type="text" value="Input Field with Readonly" disabled readonly&gt;</code></pre>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h4 class="mb-3">4. การ Binding Value กับ Model ใน Aurelia</h4>
+
+				<p>Binding Value ได้โดยเพิ่มแอตทริบิวต์ value.bind</p>
+
+				<input
+					class="form-control mb-2"
+					type="text"
+					value.bind="firstName"
+				/>
+				<span>First Name: ${firstName}</span>
+
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre
+					class="bg-light p-2 border rounded"
+				><code>&lt;input class="form-control" type="text" value.bind="firstName"&gt;</code></pre>
+			</div>
+		</div>
+	</div>
+</div>

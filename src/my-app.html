@@ -1,0 +1,82 @@
+<div class="d-flex flex-column min-vh-100">
+	<!-- Top Navigation Bar (แสดงบนมือถือ) -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none">
+		<div class="container-fluid">
+			<a class="navbar-brand">Bootstrap with Aurelia</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarMobile"
+				aria-controls="navbarMobile"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarMobile">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" load="/FormControl">Form Control</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" load="/about">เกี่ยวกับเรา</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" load="/services">บริการ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" load="/contact">ติดต่อเรา</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" load="/faq">คำถามที่พบบ่อย</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid flex-grow-1">
+		<div class="row vh-100">
+			<!-- Side Navigation Bar (แสดงบนเดสก์ท็อป) -->
+			<div
+				class="col-lg-3 col-xl-2 d-none d-lg-block bg-dark text-white py-4 sidebar"
+			>
+				<h5 class="text-center mb-4">Bootstrap with Aurelia</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link text-white" load="/FormControl">
+							<i class="bi bi-house-door me-2"></i>Form Control
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" load="/about">
+							<i class="bi bi-info-circle me-2"></i>เกี่ยวกับเรา
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" load="/services">
+							<i class="bi bi-gear me-2"></i>บริการ
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" load="/contact">
+							<i class="bi bi-envelope me-2"></i>ติดต่อเรา
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" load="/faq">
+							<i class="bi bi-question-circle me-2"></i
+							>คำถามที่พบบ่อย
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Content Area -->
+			<div id="content" class="col-12 col-lg-9 col-xl-10 mb-5 h-100">
+				<content></content>
+			</div>
+		</div>
+	</div>
+</div>
