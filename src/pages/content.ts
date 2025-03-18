@@ -7,15 +7,30 @@ export class Content {
 
 	constructor() {
 		this.ea.subscribe("au:router:navigation-end", (event) => {
-			this.pageLoading = false;
+			const overlay = document.querySelector(".page-loading-overlay");
+			overlay.classList.add("fade-out");
+			// Wait for animation to complete before hiding
+			setTimeout(() => {
+				this.pageLoading = false;
+			}, 200);
 		});
 
 		this.ea.subscribe("au:router:navigation-cancel", (event) => {
-			this.pageLoading = false;
+			const overlay = document.querySelector(".page-loading-overlay");
+			overlay.classList.add("fade-out");
+			// Wait for animation to complete before hiding
+			setTimeout(() => {
+				this.pageLoading = false;
+			}, 200);
 		});
 
 		this.ea.subscribe("au:router:navigation-error", (event) => {
-			this.pageLoading = false;
+			const overlay = document.querySelector(".page-loading-overlay");
+			overlay.classList.add("fade-out");
+			// Wait for animation to complete before hiding
+			setTimeout(() => {
+				this.pageLoading = false;
+			}, 200);
 		});
 
 		this.ea.subscribe("au:router:navigation-navigate", (event) => {
