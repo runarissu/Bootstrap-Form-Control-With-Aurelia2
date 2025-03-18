@@ -1,5 +1,4 @@
 export class CheckRadio {
-  constructor() {
-    // คุณสามารถเพิ่มโค้ดเริ่มต้นที่นี่
-  }
+	checkbox1: boolean = true;
+	checkbox2: boolean = false;
 }
