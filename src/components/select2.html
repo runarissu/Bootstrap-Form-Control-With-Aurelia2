@@ -1,25 +1,27 @@
-﻿<select
-  if.bind="!isMultiple"
-  show.bind="(EnableCustomDisplay && IsEditMode) || !EnableCustomDisplay"
-  name.bind="name"
-  id.bind="name"
-  value.bind="selectedValues"
-  tags.bind="isTags"
-  disabled.bind="disabled"
-  style="min-width: 200px"
+<select
+	if.bind="!isMultiple"
+	show.bind="(EnableCustomDisplay && IsEditMode) || !EnableCustomDisplay"
+	name.bind="name"
+	id.bind="name"
+	value.bind="selectedValues"
+	tags.bind="isTags"
+	disabled.bind="disabled"
+	style="min-width: 200px"
+	class="form-select"
 ></select>
 <select
-  if.bind="isMultiple"
-  show.bind="(EnableCustomDisplay && IsEditMode) || !EnableCustomDisplay"
-  name.bind="name"
-  id.bind="name"
-  values.bind="selectedValues"
-  multiple
-  tags.bind="isTags"
-  disabled.bind="disabled"
-  style="min-width: 200px"
+	if.bind="isMultiple"
+	show.bind="(EnableCustomDisplay && IsEditMode) || !EnableCustomDisplay"
+	name.bind="name"
+	id.bind="name"
+	values.bind="selectedValues"
+	multiple
+	tags.bind="isTags"
+	disabled.bind="disabled"
+	style="min-width: 200px"
+	class="form-select"
 ></select>
 <div
-  click.trigger="ShowSelect2Options()"
-  show.bind="(EnableCustomDisplay && !IsEditMode)"
+	click.trigger="ShowSelect2Options()"
+	show.bind="(EnableCustomDisplay && !IsEditMode)"
 ></div>

@@ -6,15 +6,149 @@
 	<div>
 		<div class="card mb-3">
 			<div class="card-body">
-				<h4 class="mb-3">1. ตัวอย่างพื้นฐาน</h4>
+				<h4 class="mb-2">1. Single Select</h4>
 				<div class="mb-2">
+					<label class="form-label">กรุณาเลือกจังหวัด</label>
 					<select2
-						calculate-item-text="Name"
-						calculate-item-id="Code"
-						name.bind="Idselect2"
-					>
-					</select2>
+						items.bind="ProvincesList"
+						calculate-item-id="code"
+						calculate-item-text="name"
+						placeholder="Please select .."
+						is-allowed-clear="true"
+					></select2>
 				</div>
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre class="bg-light p-2 border rounded mb-3"><code>&lt;select2
+	items.bind="ProvincesList"
+	calculate-item-id="code"
+	calculate-item-text="name"
+	placeholder="Please select .."
+	is-allowed-clear="true"&gt;
+&lt;/select2&gt;</code></pre>
+				<p>
+					โดยสามารถเพิ่ม property enable-search-box="true"
+					เพื่อให้สามารถพิมเพื่อค้นหาได้
+				</p>
+				<div class="mb-2">
+					<label class="form-label"
+						>กรุณาเลือกจังหวัด (พิมเพื่อค้นหาได้)</label
+					>
+					<select2
+						items.bind="ProvincesList"
+						calculate-item-id="code"
+						calculate-item-text="name"
+						enable-search-box="true"
+						placeholder="Please select .."
+						is-allowed-clear="true"
+					></select2>
+				</div>
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-2">2. Multiple Select</h4>
+				<div class="mb-2">
+					<label class="form-label">กรุณาเลือกจังหวัด</label>
+					<select2
+						items.bind="ProvincesList"
+						calculate-item-id="code"
+						calculate-item-text="name"
+						is-multiple="true"
+						placeholder="Please select .."
+						is-allowed-clear="true"
+					></select2>
+				</div>
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre class="bg-light p-2 border rounded"><code>&lt;select2
+	items.bind="ProvincesList"
+	calculate-item-id="code"
+	calculate-item-text="name"
+	is-multiple="true"
+	placeholder="Please select .."
+	is-allowed-clear="true"&gt;
+&lt;/select2&gt;</code></pre>
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-2">3. การปิดใช้งาน Select2 (Disable)</h4>
+				<p>
+					เพิ่ม property disabled.bind="true" เพื่อปิดการใช้งาน
+					select2
+				</p>
+				<div class="mb-2">
+					<label class="form-label">กรุณาเลือกจังหวัด</label>
+					<select2
+						items.bind="ProvincesList"
+						calculate-item-id="code"
+						calculate-item-text="name"
+						placeholder="Please select .."
+						is-allowed-clear="true"
+						disabled.bind="true"
+					></select2>
+				</div>
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre class="bg-light p-2 border rounded mb-3"><code>&lt;select2
+	items.bind="ProvincesList"
+	calculate-item-id="code"
+	calculate-item-text="name"
+	placeholder="Please select .."
+	is-allowed-clear="true"
+	disabled.bind="true"&gt;
+&lt;/select2&gt;</code></pre>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-body">
+				<h4 class="mb-2">4. การ Binding Value กับ Model ใน Aurelia</h4>
+				<p>Binding Value ได้โดยเพิ่ม property selected-values.bind</p>
+				<div class="mb-2">
+					<label class="form-label">กรุณาเลือกจังหวัด</label>
+					<select2
+						items.bind="ProvincesList"
+						calculate-item-id="name"
+						calculate-item-text="name"
+						placeholder="Please select .."
+						is-allowed-clear="true"
+						selected-values.bind="SelectedProvince"
+					></select2>
+				</div>
+				<span>จังหวัด: ${SelectedProvince}</span>
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre class="bg-light p-2 border rounded mb-3"><code>&lt;select2
+	items.bind="ProvincesList"
+	calculate-item-id="name"
+	calculate-item-text="name"
+	placeholder="Please select .."
+	is-allowed-clear="true"
+	selected-values.bind="SelectedProvince"&gt;
+&lt;/select2&gt;</code></pre>
+				<p>
+					กรณีที่ต้องการ Binding Object ทำได้โดยเพิ่ม property
+					selected-items.bind
+				</p>
+				<div class="mb-2">
+					<label class="form-label">กรุณาเลือกจังหวัด</label>
+					<select2
+						items.bind="ProvincesList"
+						calculate-item-id="code"
+						calculate-item-text="name"
+						placeholder="Please select .."
+						is-allowed-clear="true"
+						selected-items.bind="SelectedProvinceItem"
+					></select2>
+				</div>
+				<div>รหัสจังหวัด: ${SelectedProvinceItem.code}</div>
+				<div>จังหวัด: ${SelectedProvinceItem.name}</div>
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre class="bg-light p-2 border rounded mb-3"><code>&lt;select2
+	items.bind="ProvincesList"
+	calculate-item-id="code"
+	calculate-item-text="name"
+	placeholder="Please select .."
+	is-allowed-clear="true"
+	selected-items.bind="SelectedProvinceItem"&gt;
+&lt;/select2&gt;</code></pre>
 			</div>
 		</div>
 	</div>

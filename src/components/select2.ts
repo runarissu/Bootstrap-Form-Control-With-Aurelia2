@@ -1,9 +1,7 @@
 ﻿
 import { bindable, BindingMode, customElement, inject, PLATFORM } from "aurelia";
-import "select2";
 import * as uniqid from "uniqid";
 import $ from "jquery";
-import "select2/dist/js/select2.min.js";
 @inject(Element)
 @customElement("select2")
 export class Select2 {
@@ -322,6 +320,7 @@ export class Select2 {
         select2Options.height = "100%";
         select2Options.minimumInputLength = self.MinLength;
         select2Options.tags = self.isTags;
+        select2Options.theme = "bootstrap-5";
         if (this.isMultiple) {
             select2Options.maximumSelectionLength = self.MaxSelectedItems;
         }
