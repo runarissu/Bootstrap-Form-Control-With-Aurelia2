@@ -1,0 +1,502 @@
+<template>
+	<div class="container mt-4">
+		<div class="jumbotron">
+			<h1 class="display-5">Accordion</h1>
+			<hr class="my-4" />
+		</div>
+		<div>
+			<!-- Basic Accordion -->
+			<div class="card mb-3">
+				<div class="card-body">
+					<h4 class="mb-3">1. พื้นฐาน</h4>
+					<p>ตัวอย่างการใช้งาน Accordion พื้นฐาน</p>
+
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseOne"
+								>
+									Accordion Item #1
+								</button>
+							</h2>
+							<div
+								id="collapseOne"
+								class="accordion-collapse collapse show"
+								data-bs-parent="#accordionExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the first item's accordion
+										body.</strong
+									>
+									It is shown by default, until the collapse
+									plugin adds the appropriate classes that we
+									use to style each element. These classes
+									control the overall appearance, as well as
+									the showing and hiding via CSS transitions.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo"
+								>
+									Accordion Item #2
+								</button>
+							</h2>
+							<div
+								id="collapseTwo"
+								class="accordion-collapse collapse"
+								data-bs-parent="#accordionExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the second item's accordion
+										body.</strong
+									>
+									It is hidden by default, until the collapse
+									plugin adds the appropriate classes that we
+									use to style each element. These classes
+									control the overall appearance, as well as
+									the showing and hiding via CSS transitions.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseThree"
+								>
+									Accordion Item #3
+								</button>
+							</h2>
+							<div
+								id="collapseThree"
+								class="accordion-collapse collapse"
+								data-bs-parent="#accordionExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the third item's accordion
+										body.</strong
+									>
+									It is hidden by default, until the collapse
+									plugin adds the appropriate classes that we
+									use to style each element. These classes
+									control the overall appearance, as well as
+									the showing and hiding via CSS transitions.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+					<pre
+						class="bg-light p-2 border rounded"
+					><code>&lt;div class="accordion" id="accordionExample"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"&gt;
+        Accordion Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample"&gt;
+      &lt;div class="accordion-body"&gt;
+        &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"&gt;
+        Accordion Item #2
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"&gt;
+      &lt;div class="accordion-body"&gt;
+        Content for item #2...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+			</div>
+
+			<!-- Flush Accordion -->
+			<div class="card mb-3">
+				<div class="card-body">
+					<h4 class="mb-3">2. Flush</h4>
+					<p>
+						ใช้ class
+						<code>accordion-flush</code> เพื่อลบเส้นขอบและมุมโค้ง
+						ทำให้ accordion แสดงแบบเต็มขอบของ container
+					</p>
+
+					<div
+						class="accordion accordion-flush"
+						id="accordionFlushExample"
+					>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseOne"
+								>
+									Accordion Item #1
+								</button>
+							</h2>
+							<div
+								id="flush-collapseOne"
+								class="accordion-collapse collapse"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the first item's accordion
+										body.</strong
+									>
+									This is a flush accordion item that has no
+									borders and is edge-to-edge with its parent
+									container.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseTwo"
+								>
+									Accordion Item #2
+								</button>
+							</h2>
+							<div
+								id="flush-collapseTwo"
+								class="accordion-collapse collapse"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the second item's accordion
+										body.</strong
+									>
+									This is a flush accordion item that has no
+									borders and is edge-to-edge with its parent
+									container.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseThree"
+								>
+									Accordion Item #3
+								</button>
+							</h2>
+							<div
+								id="flush-collapseThree"
+								class="accordion-collapse collapse"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the third item's accordion
+										body.</strong
+									>
+									This is a flush accordion item that has no
+									borders and is edge-to-edge with its parent
+									container.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+					<pre
+						class="bg-light p-2 border rounded"
+					><code>&lt;div class="accordion accordion-flush" id="accordionFlushExample"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"&gt;
+        Accordion Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample"&gt;
+      &lt;div class="accordion-body"&gt;
+        Content for flush item #1...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+			</div>
+
+			<!-- Always Open Accordion -->
+			<div class="card mb-3">
+				<div class="card-body">
+					<h4 class="mb-3">3. Always Open</h4>
+					<p>
+						ไม่ใส่ attribute <code>data-bs-parent</code> เพื่อให้
+						accordion items สามารถเปิดได้พร้อมกันหลายอัน
+					</p>
+
+					<div class="accordion" id="accordionPanelsStayOpenExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseOne"
+								>
+									Accordion Item #1
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseOne"
+								class="accordion-collapse collapse show"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the first item's accordion
+										body.</strong
+									>
+									It is shown by default. Notice that this
+									accordion doesn't close other items when one
+									is opened because the data-bs-parent
+									attribute is omitted.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseTwo"
+								>
+									Accordion Item #2
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseTwo"
+								class="accordion-collapse collapse"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the second item's accordion
+										body.</strong
+									>
+									It can be opened independently of other
+									accordion items since the data-bs-parent
+									attribute is omitted.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseThree"
+								>
+									Accordion Item #3
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseThree"
+								class="accordion-collapse collapse"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the third item's accordion
+										body.</strong
+									>
+									It can be opened independently of other
+									accordion items since the data-bs-parent
+									attribute is omitted.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+					<pre
+						class="bg-light p-2 border rounded"
+					><code>&lt;div class="accordion" id="accordionPanelsStayOpenExample"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"&gt;
+        Accordion Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"&gt;
+      &lt;div class="accordion-body"&gt;
+        Content for always open item #1...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+			</div>
+
+			<!-- Aurelia Accordion -->
+			<div class="card mb-3">
+				<div class="card-body">
+					<h4 class="mb-3">4. การแสดงโดยใช้ Aurelia</h4>
+					<p>
+						ใช้ <code>class.bind</code> เพื่อควบคุมการแสดง
+						accordion ด้วย Aurelia
+					</p>
+
+					<div class="accordion" id="accordionAureliaExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button"
+									class.bind="activeAccordion == 'item1' ? '' : 'collapsed'"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#aureliaCollapseOne"
+								>
+									Accordion Item #1
+								</button>
+							</h2>
+							<div
+								id="aureliaCollapseOne"
+								class="accordion-collapse collapse"
+								class.bind="activeAccordion == 'item1' ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'"
+								data-bs-parent="#accordionAureliaExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the first item's accordion
+										body.</strong
+									>
+									การแสดงของ accordion นี้ถูกควบคุมด้วย
+									Aurelia โดยใช้ property
+									<code>activeAccordion</code> ในไฟล์ .ts
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button"
+									class.bind="activeAccordion == 'item2' ? '' : 'collapsed'"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#aureliaCollapseTwo"
+                  data-bs-parent="#accordionAureliaExample"
+								>
+									Accordion Item #2
+								</button>
+							</h2>
+							<div
+								id="aureliaCollapseTwo"
+								class="accordion-collapse collapse"
+								class.bind="activeAccordion == 'item2' ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'"
+								data-bs-parent="#accordionAureliaExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the second item's accordion
+										body.</strong
+									>
+									ตัวอย่างนี้ถูกกำหนดให้แสดงเมื่อโหลดหน้าเพจ
+									เพราะเรากำหนดค่า
+									<code>activeAccordion = 'item2'</code>
+									ในไฟล์ .ts
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button
+									class="accordion-button"
+									class.bind="activeAccordion == 'item3' ? '' : 'collapsed'"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#aureliaCollapseThree"
+								>
+									Accordion Item #3
+								</button>
+							</h2>
+							<div
+								id="aureliaCollapseThree"
+								class="accordion-collapse collapse"
+								class.bind="activeAccordion == 'item3' ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'"
+								data-bs-parent="#accordionAureliaExample"
+							>
+								<div class="accordion-body">
+									<strong
+										>This is the third item's accordion
+										body.</strong
+									>
+									คุณสามารถเปลี่ยนค่า
+									<code>activeAccordion</code> ในไฟล์ .ts
+									เพื่อเปลี่ยนแท็บที่แสดงเริ่มต้นได้
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h5 class="mt-3 mb-2">โค้ดตัวอย่าง HTML:</h5>
+					<pre
+						class="bg-light p-2 border rounded"
+					><code>&lt;div class="accordion" id="accordionAureliaExample"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button 
+        class="accordion-button" 
+        class.bind="activeAccordion == 'item1' ? '' : 'collapsed'" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#aureliaCollapseOne"&gt;
+        Accordion Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div 
+      id="aureliaCollapseOne" 
+      class="accordion-collapse collapse" 
+      class.bind="activeAccordion == 'item1' ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'" 
+      data-bs-parent="#accordionAureliaExample"&gt;
+      &lt;div class="accordion-body"&gt;
+        เนื้อหาของ accordion item 1
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+					<h5 class="mt-3 mb-2">โค้ดตัวอย่าง TypeScript:</h5>
+					<pre
+						class="bg-light p-2 border rounded"
+					><code>export class Accordion {
+    activeAccordion: string = 'item2'; // กำหนดให้ item2 เป็น accordion ที่เปิดเริ่มต้น
+}</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

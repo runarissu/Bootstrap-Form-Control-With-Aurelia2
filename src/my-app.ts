@@ -36,6 +36,18 @@ export class MyApp {
 			title: "Date Range",
 			id: "DateRange",
 		},
+		{
+			path: "Accordion",
+			component: () => import("./pages/Accordion"),
+			title: "Accordion",
+			id: "Accordion",
+		},
+		{
+			path: "Navbar",
+			component: () => import("./pages/Navbar"),
+			title: "Navbar",
+			id: "Navbar",
+		},
 	];
 
 	// เก็บ reference ของ router
