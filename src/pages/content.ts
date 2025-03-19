@@ -12,7 +12,7 @@ export class Content {
 			// Wait for animation to complete before hiding
 			setTimeout(() => {
 				this.pageLoading = false;
-			}, 200);
+			}, 100);
 		});
 
 		this.ea.subscribe("au:router:navigation-cancel", (event) => {
@@ -21,7 +21,7 @@ export class Content {
 			// Wait for animation to complete before hiding
 			setTimeout(() => {
 				this.pageLoading = false;
-			}, 200);
+			}, 100);
 		});
 
 		this.ea.subscribe("au:router:navigation-error", (event) => {
@@ -30,7 +30,7 @@ export class Content {
 			// Wait for animation to complete before hiding
 			setTimeout(() => {
 				this.pageLoading = false;
-			}, 200);
+			}, 100);
 		});
 
 		this.ea.subscribe("au:router:navigation-navigate", (event) => {
