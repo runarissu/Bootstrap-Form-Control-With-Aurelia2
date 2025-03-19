@@ -165,7 +165,23 @@ footer {
 	background-color: transparent;
 }
 
-/* .select2-selection.select2-selection--single {
-	box-shadow: none !important;
-	border-color: none !important;
-} */
+.date-range-picker {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.date-range-picker::after {
+	/*font-family: FontAwesome;*/
+	font-family: "bootstrap-icons";
+	content: "\F214";
+	padding-left: 0.5rem;
+	flex: 0 0 auto;
+}
+
+.date-range-picker .date-range {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}

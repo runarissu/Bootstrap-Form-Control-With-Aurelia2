@@ -11,3 +11,12 @@ declare module '*.html' {
 }
 
 declare module '*.css';
+
+// Global jQuery declaration
+declare global {
+  interface Window {
+    $: jquery.JQuery;
+    jQuery: jquery.JQuery;
+    moment: moment.Moment;
+  }
+}

@@ -1,0 +1,90 @@
+<div class="container mt-4">
+	<div class="jumbotron">
+		<h1 class="display-5">Date Range</h1>
+		<hr class="my-4" />
+	</div>
+	<div>
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-2">1. พื้นฐาน</h4>
+				<p>สามารถเลือกวันที่เริ่มต้นและวันที่สิ้นสุดได้</p>
+				<div class="mb-2">
+					<div class="mb-3">
+						<date-range-picker></date-range-picker>
+					</div>
+				</div>
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre
+					class="bg-light p-2 border rounded mb-3"
+				><code>&lt;date-range-picker&gt;&lt;/date-range-picker&gt;</code></pre>
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-2">
+					2. กำหนด Min Date และ Max Date ด้วย Aurelia
+				</h4>
+				<p>
+					สามารถตั้งค่า Min Date และ Max Date โดยการเพิ่ม property
+					min-date.bind และ max-date.bind
+				</p>
+				<div class="mb-2">
+					<div class="mb-3">
+						<date-range-picker
+							min-date.bind="today"
+							max-date.bind="maxDate"
+						></date-range-picker>
+					</div>
+				</div>
+				<p>สามารถกำหนดได้โดยใช้ฟอร์แมตดังนี้</p>
+				<ul>
+					<li>
+						แบบ String เช่น
+						<pre
+							class="bg-light p-2 border rounded mb-3"
+						><code>today = "19/03/2025";
+maxDate = "25/03/2025";</code></pre>
+					</li>
+					<li>
+						แบบ DateObject เช่น
+						<pre
+							class="bg-light p-2 border rounded mb-3"
+						><code>today = new Date();
+maxDate = today.getDate() + 14</code></pre>
+					</li>
+				</ul>
+
+				<h5 class="mt-4 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre
+					class="bg-light p-2 border rounded mb-3"
+				><code>&lt;date-range-picker
+	min-date.bind="today"
+	max-date.bind="maxDate"
+&gt;&lt;/date-range-picker&gt;</code></pre>
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-2">3. การ Binding Value กับ Model ใน Aurelia</h4>
+				<p>สามารถ Binding Value ได้โดยการเพิ่ม property start-date.bind และ end-date.bind</p>
+				<div class="mb-2">
+					<div class="mb-3">
+						<date-range-picker
+							start-date.bind="startDate"
+							end-date.bind="endDate"
+						></date-range-picker>
+					</div>
+				</div>
+				<span>วันที่เข้าพัก: ${startDate}</span><br/>
+				<span>วันที่เช็คเอ้าท์: ${endDate}</span>
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre
+					class="bg-light p-2 border rounded mb-3"
+				><code>&lt;date-range-picker
+	start-date.bind="startDate"
+	end-date.bind="endDate"
+&gt;&lt;/date-range-picker&gt;</code></pre>
+			</div>
+		</div>
+	</div>
+</div>

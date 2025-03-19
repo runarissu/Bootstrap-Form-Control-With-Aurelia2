@@ -24,6 +24,18 @@ export class MyApp {
 			title: "Textarea",
 			id: "Textarea",
 		},
+		{
+			path: "Tab",
+			component: () => import("./pages/Tab"),
+			title: "Tab",
+			id: "Tab",
+		},
+		{
+			path: "DateRange",
+			component: () => import("./pages/DateRange"),
+			title: "Date Range",
+			id: "DateRange",
+		},
 	];
 
 	// เก็บ reference ของ router

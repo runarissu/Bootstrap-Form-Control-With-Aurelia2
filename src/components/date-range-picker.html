@@ -1,0 +1,20 @@
+<input
+	class="date-range-picker text-justify form-control justify-content-between"
+	disabled
+	show.bind="disabled"
+	value.bind="DisplayDate"
+/>
+
+<div
+	element.ref="element"
+	class="date-range-picker form-control"
+	show.bind="!disabled"
+>
+	<span class="date-range">
+		<time disabled.bind="disabled" datetime="${startDate}"
+			>${startDate}</time
+		>
+		<span>-</span>
+		<time disabled.bind="disabled" datetime="${endDate}">${endDate}</time>
+	</span>
+</div>

@@ -5,15 +5,18 @@ import { Content } from "./pages/content";
 import "overlayscrollbars/overlayscrollbars.css";
 import "select2/dist/css/select2.min.css";
 import { Select2 } from "./components/select2";
-import $ from "jquery";
 import select2 from "select2";
+import "daterangepicker";
+import "daterangepicker/daterangepicker.css";
+import { DateRangePicker } from "./components/date-range-picker";
 import "select2-bootstrap-5-theme/dist/select2-bootstrap-5-theme.min.css";
 
 Aurelia.register(
 	RouterConfiguration.customize({ useUrlFragmentHash: false }),
 	Content,
 	Select2,
-	select2($)
+	select2($),
+	DateRangePicker
 )
 	.app(MyApp)
 	.start();
