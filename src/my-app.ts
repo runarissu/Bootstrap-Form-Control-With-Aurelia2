@@ -74,6 +74,12 @@ export class MyApp {
 			title: "Data Table",
 			id: "DataTable",
 		},
+		{
+			path: "Validation",
+			component: () => import("./pages/Validation"),
+			title: "Validation",
+			id: "Validation",
+		},
 	];
 
 	// เก็บ reference ของ router

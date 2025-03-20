@@ -1,0 +1,84 @@
+<div class="container mt-4">
+	<div class="jumbotron">
+		<h1 class="display-5">Validation</h1>
+		<hr class="my-4" />
+	</div>
+	<div>
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="mb-2">1. การทำกรอบแดง</h4>
+				<p>ทำได้โดยการเพิ่มคลาส <code>is-invalid</code></p>
+				<div class="mb-2">
+					<div class="mb-3">
+						<label for="exampleInput" class="form-label"
+							>Example Input</label
+						>
+						<input
+							type="text"
+							class="form-control is-invalid"
+							id="exampleInput"
+						/>
+					</div>
+
+					<div class="form-check">
+						<input
+							class="form-check-input is-invalid"
+							type="checkbox"
+							id="exampleCheckbox"
+						/>
+						<label class="form-check-label" for="exampleCheckbox">
+							Example Checkbox
+						</label>
+					</div>
+
+					<div class="form-check">
+						<input
+							class="form-check-input is-invalid"
+							type="radio"
+							name="exampleRadio"
+							id="exampleRadio"
+						/>
+						<label class="form-check-label" for="exampleRadio">
+							Example Radio
+						</label>
+					</div>
+					<div class="form-check form-switch">
+						<input
+							class="form-check-input is-invalid"
+							type="checkbox"
+							role="switch"
+							id="exampleSwitch"
+						/>
+						<label class="form-check-label" for="exampleSwitch"
+							>Example Switch</label
+						>
+					</div>
+
+					<div class="mb-3">
+						<label for="exampleTextarea" class="form-label"
+							>Example Textarea</label
+						>
+						<textarea
+							class="form-control is-invalid"
+							id="exampleTextarea"
+							rows="3"
+						></textarea>
+					</div>
+					<div class="mb-3">
+						<date-range-picker
+							class="is-invalid"
+						></date-range-picker>
+					</div>
+					<div class="mb-3">
+						<select2 class="is-invalid"></select2>
+					</div>
+				</div>
+				<h5 class="mt-3 mb-2">โค้ดตัวอย่าง:</h5>
+				<pre class="bg-light p-2 border rounded mb-3"><code>&lt;textarea
+	class="form-control is-invalid"
+&gt;
+&lt;/textarea&gt;</code></pre>
+			</div>
+		</div>
+	</div>
+</div>
