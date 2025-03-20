@@ -1,7 +1,13 @@
 export class MyApp {
 	static routes = [
 		{
-			path: ["", "FormControl"],
+			path: ["", "Home"],
+			component: () => import("./pages/Home"),
+			title: "Home",
+			id: "Home",
+		},
+		{
+			path: ["FormControl"],
 			component: () => import("./pages/FormControl"),
 			title: "Form Control",
 			id: "FormControl",
@@ -47,6 +53,18 @@ export class MyApp {
 			component: () => import("./pages/Navbar"),
 			title: "Navbar",
 			id: "Navbar",
+		},
+		{
+			path: "NavGuide",
+			component: () => import("./pages/NavGuide"),
+			title: "Nav Guide",
+			id: "NavGuide",
+		},
+		{
+			path: "Dropdown",
+			component: () => import("./pages/Dropdown"),
+			title: "Dropdown Guide",
+			id: "Dropdown",
 		},
 	];
 
