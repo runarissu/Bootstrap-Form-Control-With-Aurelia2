@@ -1,3 +1,5 @@
+import { OverlayScrollbars } from "overlayscrollbars";
+
 export class MyApp {
 	static routes = [
 		{
@@ -66,27 +68,24 @@ export class MyApp {
 			title: "Dropdown Guide",
 			id: "Dropdown",
 		},
+		{
+			path: "DataTable",
+			component: () => import("./pages/DataTableGuide"),
+			title: "Data Table",
+			id: "DataTable",
+		},
 	];
 
 	// เก็บ reference ของ router
 	private router: unknown;
 
-	// ซ่อน loading screen หลังจากที่หน้าเว็บโหลดเสร็จแล้ว
 	attached() {
-		// // Bind this เพื่อให้สามารถเรียกใช้ method ได้ถูกต้อง
-		// this.hideLoading = this.hideLoading.bind(this);
-		// this.showPageLoading = this.showPageLoading.bind(this);
-		// this.hidePageLoading = this.hidePageLoading.bind(this);
-		// // รอให้หน้าเว็บโหลดเสร็จก่อนซ่อน loading screen
-		// window.addEventListener('load', this.hideLoading);
-		// // ถ้าหน้าเว็บโหลดเสร็จแล้วก่อนที่ event listener จะทำงาน
-		// if (document.readyState === 'complete') {
-		// 	this.hideLoading();
-		// }
-		// // ซ่อน loading screen หลังจาก 2 วินาที ในกรณีที่มีปัญหา
-		// setTimeout(this.hideLoading, 2000);
-		// // ตรวจจับการเปลี่ยนหน้าและแสดง loading animation
-		// this.setupRouterEvents();
+		const sidebar = document.getElementById("sidebar");
+		if (sidebar) {
+			OverlayScrollbars(sidebar, {
+				className: "os-theme-dark",
+			});
+		}
 	}
 
 	detached() {

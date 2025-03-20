@@ -10,6 +10,8 @@ import "daterangepicker";
 import "daterangepicker/daterangepicker.css";
 import { DateRangePicker } from "./components/date-range-picker";
 import "select2-bootstrap-5-theme/dist/select2-bootstrap-5-theme.min.css";
+import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
+import "datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css";
 
 Aurelia.register(
 	RouterConfiguration.customize({ useUrlFragmentHash: false }),
